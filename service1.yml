@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: reactservice
 spec:
+  externalIPs:
+    - "50.17.108.136"
   type: LoadBalancer
   selector:
     app: reactpod
