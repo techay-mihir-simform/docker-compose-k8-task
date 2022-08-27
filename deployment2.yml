@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nodecontainer
-          image: mihir13/compose_node
+          image: mihir13/compose_node:latest
           ports:
           - containerPort: 8000
           envFrom:

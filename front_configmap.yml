@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: frontconfigmap
 data:
-  LOGIN_API: http://nodeservice:30002/login
+  LOGIN_API: http://nodeservice:8000/login
   

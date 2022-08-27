@@ -3,12 +3,9 @@ kind: Service
 metadata:
   name: reactservice
 spec:
-  externalIPs:
-    - "50.17.108.136"
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: reactpod
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 30001
