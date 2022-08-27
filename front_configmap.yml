@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontconfigmap
+data:
+  LOGIN_API: http://nodeservice:30002/login
+  

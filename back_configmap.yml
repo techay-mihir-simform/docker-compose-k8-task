@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backconfigmap
+data:
+  NODE_ENV: development
+  PORT: '3000'
+  JWT_SECRET: 2aa22eb196f9e056bdf96caf15244f7e061bddc3c540b53a3b9fe40c98d067c216cc5092ca2356c07ba2c91742bc6600e569529af1b460550ebcfa56408e2717
+  DB_DATABASE: testdb
+  DB_USER: test
+  DB_PASSWORD: helloworld
+  DB_HOST: postgres
+  DB_DIALECT: postgres
+  DB_LOGGING: 'false'

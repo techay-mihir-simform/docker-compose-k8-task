@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactdeployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactpod
+  template:
+    metadata:
+      labels:
+        app: reactpod
+    spec:
+      containers:
+      - name: reactcont
+        image: mihir13/compose_react
+        ports:
+        - containerPort: 80
+        envFrom:
+          - configMapRef:
+             name: frontconfigmap
+        imagePullPolicy: Always

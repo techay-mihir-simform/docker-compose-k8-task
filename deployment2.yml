@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodedeployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodepod
+  template:
+    metadata:
+      labels:
+        app: nodepod
+    spec:
+      containers:
+        - name: nodecontainer
+          image: mihir13/compose_node
+          ports:
+          - containerPort: 8000
+          envFrom:
+          - configMapRef:
+             name: backconfigmap
+
